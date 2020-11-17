@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>Test Demo Novel</title>
+<meta charset="UTF-8">
+</head>
+<body onload="typeWriter()">
+<h1 id="main"></h1>
+<script>
+var i = 0;
+var txt = 'this is typewriter, please change text from var txt';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("main").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+</body>
+</html>
